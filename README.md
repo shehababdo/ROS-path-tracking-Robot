@@ -1,52 +1,25 @@
-TurtleBot3 Waffle Robot - Lane Keeping and Obstacle Avoidance
+# TurtleBot3 Waffle Robot - Lane Keeping and Obstacle Avoidance
+
 This project demonstrates how to achieve straight-line movement and obstacle avoidance using a TurtleBot3 Waffle robot in a Gazebo simulation. The project is divided into two phases: Lane Keeping and Lane Switching.
 
-Phase 1: Straight Line Movement (Lane Keeping)
+## Phase 1: Straight Line Movement (Lane Keeping)
+
 In the first phase, the robot uses a camera to calculate its heading and detect any drifting. By analyzing the heading information, the robot identifies deviations and adjusts the steering angle based on contour detection of lines and calculating the centroid of the line.
 
-Phase 2: Obstacle Avoidance (Lane Switching)
+## Phase 2: Obstacle Avoidance (Lane Switching)
+
 In the second phase, the robot uses a LiDAR sensor to detect obstacles in real-time. When an obstacle is detected at approximately 100 cm, the robot initiates a lane change maneuver to avoid it. The obstacle detection and decision-making algorithms determine the appropriate action based on the sensor data. The robot uses an ultrasonic sensor to identify obstacles and decides to turn left or right to avoid them.
 
-Prerequisites
-Install ROS1: Follow the instructions to install ROS1 from the official ROS documentation here.
+## Prerequisites
 
-Install TurtleBot3: Follow the instructions to install TurtleBot3 on ROS1 from the official TurtleBot3 documentation here.
+1. **Install ROS1**: Follow the instructions to install ROS1 from the official ROS documentation [here](http://wiki.ros.org/noetic/Installation).
 
-Setup Instructions
-Step 1: Clone the TurtleBot3 Simulation Package
-bash
+2. **Install TurtleBot3**: Follow the instructions to install TurtleBot3 on ROS1 from the official TurtleBot3 documentation [here](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup).
+
+## Setup Instructions
+
+### Step 1: Clone the TurtleBot3 Simulation Package
+
+```bash
 cd ~/catkin_ws/src
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
-Step 2: Add the World Files
-Add the two world files (lane_keeping.world and lane_switching.world) to the TurtleBot3 simulation package.
-
-bash
-cp /path/to/lane_keeping.world ~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/worlds/
-cp /path/to/lane_switching.world ~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/worlds/
-Step 3: Add the Launch Files
-Add the two launch files (lane_keeping.launch and lane_switching.launch) to the TurtleBot3 simulation package.
-
-bash
-cp /path/to/lane_keeping.launch ~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/launch/
-cp /path/to/lane_switching.launch ~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/launch/
-Step 4: Add the Python Scripts
-Add the source Python scripts (lane_keeping.py and lane_switching.py) to the TurtleBot3 package.
-
-bash
-cp /path/to/lane_keeping.py ~/catkin_ws/src/turtlebot3/turtlebot3_example/scripts/
-cp /path/to/lane_switching.py ~/catkin_ws/src/turtlebot3/turtlebot3_example/scripts/
-Step 5: Build the Workspace
-Navigate to your catkin workspace and build the packages.
-
-bash
-cd ~/catkin_ws
-catkin_make
-Step 6: Launch the Simulation
-To launch the lane-keeping simulation:
-
-bash
-roslaunch turtlebot3_gazebo lane_keeping.launch
-To launch the lane-switching simulation:
-
-bash
-roslaunch turtlebot3_gazebo lane_switching.launch
