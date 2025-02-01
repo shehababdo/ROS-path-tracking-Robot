@@ -60,3 +60,24 @@ To launch the lane-switching simulation:
 ```bash
 roslaunch turtlebot3_gazebo lane_switching.launch
 ```
+### Step 7: Run the Scripts
+To Run the lane-keeping Control:
+```bash
+rosrun turtlebot3_gazebo camera_scans.py
+```
+```bash
+rosrun turtlebot3_gazebo control.py
+```
+To Run the lane-switching Control:
+```bash
+rosrun turtlebot3_gazebo camera_scans.py
+```
+```bash
+rosrun turtlebot3_gazebo control2.py
+```
+```bash
+rosrun turtlebot3_gazebo object_detection.py
+```
+```bash
+rosrun turtlebot3_gazebo lane_switching_bot.py
+```
