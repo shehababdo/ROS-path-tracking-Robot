@@ -1,4 +1,4 @@
-# TurtleBot3 Waffle Robot - Lane Keeping and Obstacle Avoidance
+# TurtleBot3 Waffle Robot - autonomous Lane Tracking & obstacle Avoidance Robot
 
 This project demonstrates how to achieve straight-line movement and obstacle avoidance using a TurtleBot3 Waffle robot in a Gazebo simulation. The project is divided into two phases: Lane Keeping and Lane Switching.
 
