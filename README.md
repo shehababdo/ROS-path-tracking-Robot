@@ -81,3 +81,5 @@ rosrun turtlebot3_gazebo object_detection.py
 ```bash
 rosrun turtlebot3_gazebo lane_switching_bot.py
 ```
+
+Link to video of the project : (https://www.linkedin.com/posts/shehab-abdo-a94946198_robotics-ros-gazebo-activity-7291479772294004737-o52V?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC5p3pABUmb1OvPQW8oWWD1ArLuAKxEYADY)
